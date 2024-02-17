@@ -9,7 +9,7 @@ namespace HTML_Serializer
 {
     public class HTMLHelper
     {
-        private readonly static HTMLHelper _instance = new HTMLHelper();
+        private readonly static HTMLHelper _instance = new HTMLHelper();// singelton
         public static HTMLHelper Instance => _instance;
         public string[] TagsExist { get; set; }//כל התגיות הקיימות
         public string[] TagsVoid { get; set; }//תגיות ללא צורך בתגית סוגרת

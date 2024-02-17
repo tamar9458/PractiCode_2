@@ -20,9 +20,11 @@ PrintHtmlTree(htmlTree, "");
 
 HashSet<HTMLElement> resultSelectors = htmlRoot.FindElement(Selector.Parse("div.copyR p"));                    //חיפוש ע''פ שאילתה
 
+
 Console.WriteLine("result of the query:");
 foreach (HTMLElement e in resultSelectors)
     Console.WriteLine(e.ToString());
+
 Console.ReadKey();
 
 async Task<string> Load(string url)
@@ -78,9 +80,7 @@ static HTMLElement Build_tree_html(HTMLElement root, IEnumerable<string> htmlLin
             restLine = line.Substring(findSpace + 1);
         }
         if (line.StartsWith("/html"))
-        {
             break;
-        }
         if (line.StartsWith("/"))
         {
             temp = temp.Parent;
